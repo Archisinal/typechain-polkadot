@@ -122,8 +122,7 @@ function _signAndSend(registry, extrinsic, signer, eventHandler) {
                         from: signerAddress.toString(),
                         txHash: extrinsic.hash.toHex(),
                     };
-                    extrinsic
-                        .signAndSend(signer, function (result) {
+                    var statusCallback = function (result) {
                         if (result.status.isInBlock) {
                             actionStatus.blockHash = result.status.asInBlock.toHex();
                         }
@@ -172,13 +171,19 @@ function _signAndSend(registry, extrinsic, signer, eventHandler) {
                             actionStatus.events = undefined;
                             reject(actionStatus);
                         }
-                    })
-                        .catch(function (error) {
+                    };
+                    var errorCallback = function (error) {
                         actionStatus.error = {
                             message: error.message,
                         };
                         reject(actionStatus);
-                    });
+                    };
+                    if ('signer' in signer) {
+                        extrinsic.signAndSend(signerAddress, { signer: signer.signer }, statusCallback).catch(errorCallback);
+                    }
+                    else {
+                        extrinsic.signAndSend(signer, statusCallback).catch(errorCallback);
+                    }
                 })];
         });
     });

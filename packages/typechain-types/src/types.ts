@@ -25,6 +25,7 @@ import type { ContractExecResultErr } from '@polkadot/types/interfaces/contracts
 import type {AnyJson} from "@polkadot/types-codec/types";
 import fs from "fs";
 import {WeightV2} from "@polkadot/types/interfaces";
+import {Signer} from "@polkadot/types/types";
 
 export type RequestArgumentType = number | string | boolean | bigint
 	| (string | number)[]
@@ -174,4 +175,9 @@ export class ReturnNumber {
 export interface ReturnedEvent {
 	name: string;
 	args: Record<string, AnyJson>;
+}
+
+export interface ExternalSigner {
+	signer: Signer;
+	address: string;
 }

@@ -1,4 +1,6 @@
 import {Abi} from "@polkadot/api-contract";
+import { AddressOrPair } from "@polkadot/api/types";
+import { Signer } from '@polkadot/types/types';
 
 export interface TypechainPlugin {
 	name: string;

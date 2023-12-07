@@ -2,6 +2,7 @@ import BN from 'bn.js';
 import type { ContractExecResultErr } from '@polkadot/types/interfaces/contracts/types';
 import type { AnyJson } from "@polkadot/types-codec/types";
 import { WeightV2 } from "@polkadot/types/interfaces";
+import { Signer } from "@polkadot/types/types";
 export type RequestArgumentType = number | string | boolean | bigint | (string | number)[] | BN | null | AnyJson | Object;
 export interface GasLimit {
     /**
@@ -75,5 +76,9 @@ export declare class ReturnNumber {
 export interface ReturnedEvent {
     name: string;
     args: Record<string, AnyJson>;
+}
+export interface ExternalSigner {
+    signer: Signer;
+    address: string;
 }
 //# sourceMappingURL=types.d.ts.map
