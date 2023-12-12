@@ -1,15 +1,15 @@
 {
-  "name": "@727-ventures/typechain-types",
-  "version": "1.1.5",
+  "name": "@archisinal/typechain-types",
+  "version": "1.0.0",
   "description": "Types and utility function for TypeChain",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/727-ventures/typechain-polkadot.git"
+    "url": "git+https://github.com/archisinal/typechain-polkadot.git"
   },
   "author": "Supercolony-net",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/727-ventures/typechain-polkadot/issues"
+    "url": "https://github.com/archisinal/typechain-polkadot/issues"
   },
   "scripts": {
     "build": "npx tsc",
@@ -22,7 +22,7 @@
     "dist"
   ],
   "main": "dist/index.js",
-  "homepage": "https://github.com/727-ventures/typechain-polkadot#readme",
+  "homepage": "https://github.com/archisinal/typechain-polkadot#readme",
   "dependencies": {
     "@polkadot/api": "^10.8.1",
     "@polkadot/api-contract": "^10.8.1",

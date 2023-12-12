@@ -1,6 +1,6 @@
 {
-  "name": "@727-ventures/typechain-compiler",
-  "version": "1.1.4",
+  "name": "@archisinal/typechain-compiler",
+  "version": "1.0.0",
   "description": "Util to test and compile your rust project",
   "bin": {
     "typechain-compiler": "bin/index.js"
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/727-ventures/typechain-polkadot.git"
+    "url": "git+https://github.com/archisinal/typechain-polkadot.git"
   },
   "files": [
     "index.ts",
@@ -23,14 +23,14 @@
     "npm": ">=7.0.0"
   },
   "engineStrict": true,
-  "author": "727-Ventures",
+  "author": "archisinal",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/727-ventures/typechain-polkadot/issues"
+    "url": "https://github.com/archisinal/typechain-polkadot/issues"
   },
-  "homepage": "https://github.com/727-ventures/typechain-polkadot#readme",
+  "homepage": "https://github.com/archisinal/typechain-polkadot#readme",
   "dependencies": {
-    "@727-ventures/typechain-polkadot": "^1.1.1",
+    "@archisinal/typechain-polkadot": "1.0.0",
     "@types/consola": "^2.2.5",
     "@types/yargs": "^17.0.10",
     "chalk": "^4.1.0",

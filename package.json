@@ -18,8 +18,8 @@
 	},
 	"dependencies": {
 		"lerna": "^5.1.8",
-		"@727-ventures/typechain-polkadot": "file:packages/typechain-polkadot",
-		"@727-ventures/typechain-types": "file:packages/typechain-types",
+		"@archisinal/typechain-polkadot": "file:packages/typechain-polkadot",
+		"@archisinal/typechain-types": "file:packages/typechain-types",
 		"@types/bn.js": "^5.1.0",
 		"@types/eslint": "^8.4.3",
 		"@types/jest": "^27.5.2",
