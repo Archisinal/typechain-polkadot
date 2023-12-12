@@ -35,7 +35,7 @@ export interface GasLimit {
 	/**
 	 * Defaults to `-1`
 	 */
-	gasLimit ? : WeightV2 | null;
+	gasLimit ? : WeightV2;
 }
 
 export interface GasLimitAndValue extends GasLimit {
