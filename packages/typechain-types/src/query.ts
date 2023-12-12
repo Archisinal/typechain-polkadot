@@ -135,7 +135,7 @@ export async function queryOutput(
 	callerAddress : string,
 	//
 	title : string,
-	args ? : readonly RequestArgumentType[],
+	args  : readonly RequestArgumentType[] = [],
 	gasLimitAndValue ? : GasLimitAndValue,
 ) {
 	const contractAddress = nativeContract.address.toString();
@@ -147,7 +147,6 @@ export async function queryOutput(
 		throw error;
 	}
 
-	const _args = args || [];
 	const _gasLimitAndValue = await _genValidGasLimitAndValue(api, gasLimitAndValue);
 
 	let response : ContractCallOutcome;
@@ -156,7 +155,7 @@ export async function queryOutput(
 		response = await nativeContract.query[title]!(
 			callerAddress,
 			_gasLimitAndValue,
-			..._args,
+			...args,
 		);
 	}
 	catch(caughtError) {
