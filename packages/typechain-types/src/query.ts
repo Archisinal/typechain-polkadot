@@ -155,7 +155,7 @@ export async function queryOutput(
 		response = await nativeContract.query[title]!(
 			callerAddress,
 			_gasLimitAndValue,
-			...args,
+			...(args || []),
 		);
 	}
 	catch(caughtError) {
